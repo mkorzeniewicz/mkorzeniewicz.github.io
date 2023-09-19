@@ -1,0 +1,135 @@
+.section.npcs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.cards-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    flex: 1;
+}
+
+.card {
+    flex: 1;
+    aspect-ratio: 5/8;
+    min-width: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #dccdbb;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+
+    /* for title */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    /*  */
+    overflow: hidden;
+
+
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+    transform: scale(1.08);
+}
+
+.card:hover::before {
+    content: "Click me!";
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card:hover h2 {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.08);
+}
+
+.card h2 {
+    transition: transform 0.5s ease-in-out;
+    text-shadow: rgb(19, 18, 17) 1px 0 8px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 0.7em;
+    padding: 20px;
+    font-size: min(3vw, 50px);
+    font-stretch: expanded;
+    justify-content: center;
+}
+
+.card h2 small {
+    text-shadow: rgb(19, 18, 17) 1px 0 8px;
+    font-size: min(3vw, 22px);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.my-modal {
+    border-radius: 30px;
+    cursor: default;
+    background-color: rgb(224 224 255);
+    overflow: hidden;
+}
+
+.modal-body {
+    border-radius: 30px;
+    align-items: center;
+    width: 100%;
+    /* min-width: 700px; */
+    max-height: 90vh;
+    max-width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.modal-body::before {
+    content: "Click ESC to close";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal-body img {
+    border-radius: 30px;
+
+}
+
+.npc-details {
+    overflow-y: auto;
+        display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.npc-details .title {
+    font-weight: 700;
+}
+
+/* Default style for smaller screens */
+.npc-details .description {
+    font-size: 12px;
+}
+
+/* Style for screens that are 2560px wide or larger */
+@media (min-width: 1940px) {
+    .npc-details .description {
+        font-size: 14px;
+    }
+}

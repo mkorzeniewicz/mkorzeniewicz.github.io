@@ -1,0 +1,121 @@
+.section.main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    /* padding: 100px 50px 50px 50px; */
+    padding-top: 100px;
+    max-width: 1200px;
+    color: #dccdbb;
+}
+
+.imageContainer {
+    flex: 50%;
+    /* max-height: 100px; */
+    aspect-ratio: 550 / 800;
+    position: relative;
+}
+
+.mainImg {
+    border-radius: 30px;
+    max-width: 600px; 
+    border: 1px solid #ccc;
+}
+
+.textContainer {
+    flex: 50%;
+    text-decoration-line: none;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    margin: 0px;
+    padding: 10px;
+    line-height: 25px;
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.header {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+}
+
+.subheader {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 14px;
+    margin: 0 0 15px 0;
+    padding: 0 10px 30px 0;
+    border-top: 2px solid #dccdbb;
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 25px 50px 0;
+    padding-top: 0 10px 0 0;
+}
+
+/* quote */
+
+.blockquote-container {
+	background: #fffdf5;
+	color: #3f3f5a;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    width: 450px;
+    height: 170px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    padding: 40px 10px 0px 10px;
+}
+
+blockquote {
+    font-family: 'SpecialElite', cursive;
+	font-weight: 100;
+	font-size: 20px;
+	max-width: 350px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
+}
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #f1efe6;
+	font-size: 4rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+blockquote:before {
+	content: '“';
+	left: -2rem;
+	top: -1rem;
+}
+
+blockquote:after {
+	content: '”';
+	right: -1rem;
+	bottom: 1rem;
+}
+
+cite {
+	line-height: 3;
+	font-size: 10px;
+	text-align: left;
+    font-family: 'SpecialElite', cursive;
+}
