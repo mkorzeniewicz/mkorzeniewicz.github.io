@@ -31,3 +31,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// Image attachements
+
+const lightboxBg = document.createElement("div");
+lightboxBg.className = "lightbox-bg";
+document.body.appendChild(lightboxBg);
+
+const lightboxImage = document.createElement("img");
+lightboxImage.className = "lightbox-image";
+
+const images = document.querySelectorAll(".image");
+images.forEach((image) => {
+  image.addEventListener("click", () => {
+    lightboxBg.classList.add("active");
+    lightboxImage.src = image.src;
+    lightboxBg.appendChild(lightboxImage);
+  });
+});
+
+lightboxBg.addEventListener("click", () => {
+  lightboxBg.removeChild(lightboxImage);
+  lightboxBg.classList.remove("active");
+});
