@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main page</title>
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <link rel="stylesheet" href="assets/styles/npcs.css">
+  <link rel="stylesheet" href="assets/styles/timeline.css">
+  <link rel="stylesheet" href="assets/styles/events.css">
+  <link rel="stylesheet" href="assets/styles/letter.css">
+  <style>
+    .tilted-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .tilted-images a {
+      transform: rotateZ(-5deg);
+    }
+
+    .tilted-images a:last-child {
+      transform: rotateZ(5deg);
+    }
+
+    .tilted-images img {
+      height: 800px;
+      width: 550px;
+      border-radius: 30px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+      transition: transform 0.5s ease-in-out;
+      transform: scale(1);
+    }
+
+    .tilted-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .tilted-images a {
+      position: relative;
+    }
+
+    .tilted-images h1 {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tilted-images">
+    <a href="orient-giovanni.html">
+      <img src="assets/Giovanni Ricci.png" alt="Giovanni">
+      <h1>Giovanni Ricci</h1>
+    </a>
+    <a href="orient-roderick.html">
+      <img src="assets/Roderick.jpg" alt="Roderick">
+      <h1>Roderick Barrington</h1>
+    </a>
+  </div>
+  <script src="assets/script.js"></script>
+</body>
+
+</html>
